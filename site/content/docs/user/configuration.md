@@ -283,10 +283,10 @@ for persisting data, mounting through code etc.
 {{< codeFromFile file="static/examples/config-with-mounts.yaml" lang="yaml" >}}
 
 
-NOTE: If you are using Docker for Mac or Windows check that the hostPath is
+NOTE: If you are using Docker for Mac, or not using WLS on Windows, check that the hostPath is
 included in the Preferences -> Resources -> File Sharing.
 
-For more information see the [Docker file sharing guide.](https://docs.docker.com/docker-for-mac/#file-sharing)
+For more information see the [Docker file sharing guide](https://docs.docker.com/docker-for-mac/#file-sharing) on Mac, or the [Docker run reference](https://docs.docker.com/engine/reference/run/#volume-shared-filesystems) on Windows (assuming WLS). The extraMounts section is essentially a pass-through to `docker run --volume host-src:container-dest`.
 
 ### Extra Port Mappings
 
