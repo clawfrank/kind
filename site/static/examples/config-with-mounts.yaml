@@ -4,6 +4,9 @@ nodes:
 - role: control-plane
   # add a mount from /path/to/my/files on the host to /files on the node
   extraMounts:
+  # hostPath is the path on your local system, e.g. your desktop or laptop; a
+  # typical Windows path is also valid e.g. C:\my-test-data\
+  # containerPath is the path on the docker container that is running kubernetes
   - hostPath: /path/to/my/files/
     containerPath: /files
     # optional: if set, the mount is read-only.
